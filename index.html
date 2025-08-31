@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rashidova Zevara - Stylist</title>
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0; padding: 0;
+  }
+  .container {
+    background-color: rgba(75, 0, 94, 0.85);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  img.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+  }
+  h1 {
+    margin: 15px 0 5px 0;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  p.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  button {
+    width: 80%;
+    background-color: #d61a7f;
+    border: none;
+    color: white;
+    padding: 14px 0;
+    margin: 10px auto;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  button:hover {
+    background-color: #b21266;
+    box-shadow: 0 0 8px #b21266;
+  }
+  button svg {
+    fill: white;
+    width: 22px;
+    height: 22px;
+  }
+  @media (max-width: 420px) {
+    .container {
+      max-width: 90%;
+      margin: 20px auto;
+    }
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: #4b005e;
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    max-width: 320px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  .modal-content label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+  }
+  .modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .modal-content button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #d61a7f;
+    border-radius: 30px;
+    padding: 12px 0;
+    font-size: 18px;
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="profile" src="https://th.bing.com/th/id/OIP.cwv8zRDXuBm1iKJWF7a6ewHaHa?w=209&h=209&c=7&r=0&o=7&pid=1.7&rm=3" alt="Rashidova Zevara" />
+  <h1>Rashidova Zevara</h1>
+  <p class="subtitle">Stylist</p>
+
+  <button aria-label="Позвонить Rashidova Zevara" onclick="window.location.href='tel:+998978915556'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11z"/></svg>
+    Позвонить
+  </button>
+
+  <button aria-label="Перейти в Instagram" onclick="window.open('https://www.instagram.com/ganjina_beautysalon?igsh=MWxxeXBybzFqYW96aA%3D%3D&utm_source=qr', '_blank')">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.62 2.37a1.12 1.12 0 110 2.24 1.12 1.12 0 010-2.24zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+    Instagram
+  </button>
+
+  <button aria-label="Перейти в Telegram" onclick="window.open('https://t.me/yourprofile', '_blank')">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.005 17.566l-.357 5.14c.51 0 .73-.22 1.005-.487l2.41-2.31 4.995 3.71c.916.505 1.57.244 1.805-.846l3.27-15.36c.314-1.457-.533-2.08-1.487-1.716L3.26 11.06c-1.4.55-1.39 1.333-.24 1.708l5.984 1.86 13.89-8.75"/></svg>
+    Telegram
+  </button>
+
+  <button aria-label="Записаться на услугу" id="openModalBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5v2a5 5 0 01-10 0V7a5 5 0 015-5zm0 16c-4.5 0-8 2.25-8 4.5V22h16v.5c0-2.25-3.5-4.5-8-4.5z"/></svg>
+    Записаться
+  </button>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal-content">
+    <button class="close-btn" aria-label="Закрыть окно" id="closeModalBtn">&times;</button>
+    <h2 id="modalTitle">Записаться</h2>
+    <p id="modalDesc">Пожалуйста, заполните форму ниже, и мы свяжемся с вами.</p>
+    <form id="bookingForm">
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required placeholder="Ваше имя" />
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="+998 ..." />
+
+      <label for="message">Комментарий:</label>
+      <textarea id="message" name="message" rows="3" placeholder="Ваше сообщение (необязательно)"></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const form = document.getElementById('bookingForm');
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if(e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Спасибо за запись! Мы свяжемся с вами в ближайшее время.');
+    form.reset();
+    modal.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
